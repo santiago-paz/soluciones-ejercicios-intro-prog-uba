@@ -40,6 +40,19 @@ mismoIntervalo a b | (a < 3) && (b < 3) = True
 
 -- g
 sumaDistintos :: Integer -> Integer -> Integer -> Integer
-sumaDistintos a b c | not (a == b) && not (b == c) = a + b + c
 sumaDistintos a b c | (a == b) && not (b == c) = a + c
 sumaDistintos a b c | (a == c) && not (b == c) = b + c
+sumaDistintos a b c | (b == c) && not (a == c) = a + b
+                    | otherwise = a + b + c
+
+-- h
+esMultiploDe :: Integer -> Integer -> Bool
+esMultiploDe a b = (mod b a) == 0
+
+-- i
+digitoUnidades :: Integer -> Integer
+digitoUnidades a = (mod a 10)
+
+-- j
+digitoDecenas :: Integer -> Integer
+digitoDecenas a = (mod a 100)
