@@ -55,4 +55,4 @@ digitoUnidades a = (mod a 10)
 
 -- j
 digitoDecenas :: Integer -> Integer
-digitoDecenas a = (mod a 100)
+digitoDecenas a = mod (div a 10) 10
