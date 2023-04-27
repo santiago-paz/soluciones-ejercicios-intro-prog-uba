@@ -18,7 +18,7 @@ f3 n q
   | n == 1 = q + q ^ 2
   | otherwise = (q ^ (2 * n)) + (q ^ ((2 * n) - 1)) + f3 (n - 1) q
 
--- d)
+-- d) INCOMPLETO
 f4 :: Integer -> Float -> Float
 f4 n q
   | n == 0 = 0
