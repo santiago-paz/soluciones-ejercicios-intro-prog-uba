@@ -50,5 +50,26 @@ eliminarRepetidos (x : xs)
 
 -- 8)
 mismosElementos :: (Eq t) => [t] -> [t] -> Bool
-mismosElementos [] [] = True
-mismosElementos (x : xs) (y : ys) = elem x (y:ys) && elem y (x:xs) && mismosElementos xs ys
+mismosElementos [] _ = True
+mismosElementos x y = estanEn xsr ysr && estanEn ysr xsr
+  where
+    ysr = eliminarRepetidos y
+    xsr = eliminarRepetidos x
+
+estanEn :: (Eq t) => [t] -> [t] -> Bool
+estanEn [] _ = True
+estanEn (x : xs) ys = elem x ys && estanEn xs ys
+
+-- 9)
+capicua :: (Eq t) => [t] -> Bool
+capicua [] = True
+capicua [a] = True
+capicua (x : xs) = igualAlUltimo x xs && capicua (quitarUltimo xs)
+
+igualAlUltimo :: (Eq t) => t -> [t] -> Bool
+igualAlUltimo t [a] = t == a
+igualAlUltimo t (x : xs) = igualAlUltimo t xs
+
+quitarUltimo :: (Eq t) => [t] -> [t]
+quitarUltimo [t] = []
+quitarUltimo (x : xs) = x : quitarUltimo xs
