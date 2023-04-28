@@ -47,3 +47,15 @@ pares [] = []
 pares (a : xs)
   | mod a 2 == 0 = a : pares xs
   | otherwise = pares xs
+
+-- 8 )
+multiplosDeN :: Integer -> [Integer] -> [Integer]
+multiplosDeN a (x : xs)
+  | length xs == 0 = []
+  | mod a x == 0 = x : multiplosDeN a xs
+  | otherwise = multiplosDeN a xs
+
+-- 9 )
+ordenar :: [Integer] -> [Integer]
+ordenar [a, b] = if a >= b then [b, a] else [a, b]
+ordenar (x : y : xs) = if x >= y then [y, x] ++ ordenar xs else [x, y] ++ ordenar xs
