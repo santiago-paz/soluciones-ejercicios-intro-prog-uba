@@ -15,7 +15,7 @@ esPrimo :: Integer -> Bool
 esPrimo 1 = False
 esPrimo n = menorDivisor n == n
 
--- Terminar:
+------- TERMINAR:
 -- c)
 sonCoprimos :: Integer -> Integer -> Bool
 sonCoprimos 1 b = False
