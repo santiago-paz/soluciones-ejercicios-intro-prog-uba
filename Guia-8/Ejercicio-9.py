@@ -32,6 +32,3 @@ def esVocal(e: str) -> bool:
         ):
             return True
     return False
-
-
-print(tieneTresVocalesDistintas("MUERCIELAGO"))
