@@ -48,6 +48,3 @@ def monitoreo_viaje_tiempo(año_partida: int, año_llegada: int):
 def mas_cercano_aristoteles(año_partida: int):
     for x in range(año_partida, año_partida <= -384, -20):
         print("Viajó veinte años al pasado, estamos en el año: " + str(x))
-
-
-mas_cercano_aristoteles(1992)
