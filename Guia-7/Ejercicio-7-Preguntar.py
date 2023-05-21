@@ -1,7 +1,6 @@
-""" 1) """
-
-
 from math import fmod
+
+""" 1) """
 
 
 def imprimir_numeros():
@@ -39,15 +38,16 @@ def cuenta_regresiva(numero: int):
 
 
 def monitoreo_viaje_tiempo(año_partida: int, año_llegada: int):
-    while año_partida > año_llegada:
-        año_partida = año_partida - 1
-        print("Viajó un año al pasado, estamos en el año: " + str(año_partida))
+    for x in range(año_partida - 1, año_llegada - 1, -1):
+        print("Viajó un año al pasado, estamos en el año: " + str(x))
 
 
 """ 6) """
 
 
 def mas_cercano_aristoteles(año_partida: int):
-    while año_partida > -384:
-        año_partida = año_partida - 20
-        print("Viajó veinte años al pasado, estamos en el año: " + str(año_partida))
+    for x in range(año_partida, año_partida <= -384, -20):
+        print("Viajó veinte años al pasado, estamos en el año: " + str(x))
+
+
+mas_cercano_aristoteles(1992)

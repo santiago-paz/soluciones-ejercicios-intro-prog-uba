@@ -1,7 +1,6 @@
-""" 1) """
-
-
 from math import fmod
+
+""" 1) """
 
 
 def imprimir_numeros():
