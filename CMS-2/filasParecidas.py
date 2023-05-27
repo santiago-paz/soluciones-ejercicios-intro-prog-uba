@@ -5,7 +5,7 @@ from typing import List
 # Respetar esta sintaxis, ya que el CMS dirá que no pasó ningún test si usan otra notación.
 def filasParecidas(matriz: List[List[int]]) -> bool :
   # Implementar esta funcion
-  if len(matriz) == 1: return False
+  if len(matriz) == 1: return True
 
   posibleConstante = averiguarPosibleConstante(matriz)
 
