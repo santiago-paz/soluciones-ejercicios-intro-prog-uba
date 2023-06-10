@@ -11,3 +11,8 @@ def generarNrosAlAzar(n: int, desde: int, hasta: int) -> list[int]:
     return result
 
 
+def armarColaEnteros(l: list[int]) -> Cola:
+    result = Cola()
+    for e in l:
+        result.put(e)
+    return result
